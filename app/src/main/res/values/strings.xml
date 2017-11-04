@@ -1,3 +1,5 @@
 <resources>
-    <string name="app_name">TRUMARKET</string>
+    <string name="app_name">InsideSeoul</string>
+    <string name="facebook_app_id">734229383428043</string>
+    <string name="fb_login_protocol_scheme">fb734229383428043</string>
 </resources>
