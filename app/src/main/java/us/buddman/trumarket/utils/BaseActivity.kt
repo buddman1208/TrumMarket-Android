@@ -27,9 +27,9 @@ abstract class BaseActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        setContentView(onCreateViewId())
-        if (onCreateViewToolbarId() != 0) {
-            toolbar = findViewById<View>(onCreateViewToolbarId()) as Toolbar
+        setContentView(onCreateViewId)
+        if (onCreateViewToolbarId != 0) {
+            toolbar = findViewById<View>(onCreateViewToolbarId) as Toolbar
             setSupportActionBar(toolbar)
             toolbar.setTitleTextColor(Color.WHITE)
             toolbar.contentInsetStartWithNavigation = 0
@@ -43,11 +43,9 @@ abstract class BaseActivity : AppCompatActivity() {
 
     protected abstract fun setDefault()
 
-    @LayoutRes
-    protected abstract fun onCreateViewId(): Int
+    protected abstract val onCreateViewId: Int
 
-    @IdRes
-    protected abstract fun onCreateViewToolbarId(): Int
+    protected abstract val onCreateViewToolbarId: Int
 
 
     fun disableToggle() {

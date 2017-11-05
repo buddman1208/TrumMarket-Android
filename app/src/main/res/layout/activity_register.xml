@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="us.buddman.trumarket.AuthActivity">
+    tools:context="us.buddman.trumarket.RegisterActivity">
 
     <android.support.design.widget.AppBarLayout
         android:layout_width="match_parent"
@@ -24,21 +24,18 @@
         android:paddingLeft="16dp"
         android:paddingRight="16dp">
 
-        <ImageView
-            android:layout_marginTop="32dp"
-            android:layout_marginBottom="32dp"
-            android:src="@drawable/pic_login_logo"
+        <studio.carbonylgroup.textfieldboxes.TextFieldBoxes
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
-
-        <TextView
-            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:paddingBottom="8dp"
-            android:paddingTop="8dp"
-            android:text="이미 트럼프같은 생각을 하고 있는 자"
-            android:textColor="@color/textNormalColor"
-            android:textStyle="bold" />
+            android:layout_marginTop="16dp"
+            app:labelText="Nickname">
+
+            <studio.carbonylgroup.textfieldboxes.ExtendedEditText
+                android:id="@+id/nicknameInput"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPassword" />
+        </studio.carbonylgroup.textfieldboxes.TextFieldBoxes>
 
         <studio.carbonylgroup.textfieldboxes.TextFieldBoxes
             android:layout_width="match_parent"
@@ -66,6 +63,19 @@
                 android:inputType="textPassword" />
         </studio.carbonylgroup.textfieldboxes.TextFieldBoxes>
 
+        <studio.carbonylgroup.textfieldboxes.TextFieldBoxes
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            app:labelText="Phone Number">
+
+            <studio.carbonylgroup.textfieldboxes.ExtendedEditText
+                android:id="@+id/phonenumberInput"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPassword" />
+        </studio.carbonylgroup.textfieldboxes.TextFieldBoxes>
+
         <View
             android:layout_width="match_parent"
             android:layout_height="1dp"
@@ -73,41 +83,17 @@
             android:layout_marginTop="8dp"
             android:background="@color/divider_color" />
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:paddingBottom="8dp"
-            android:paddingTop="8dp"
-            android:text="이미 트럼프같은 생각을 하고 있는 자"
-            android:textColor="@color/textNormalColor"
-            android:textStyle="bold" />
-
         <Button
-            android:id="@+id/localLogin"
+            android:id="@+id/registerButton"
             android:layout_width="match_parent"
             android:layout_height="56dp"
             android:layout_marginTop="8dp"
             android:background="@drawable/round_brown"
-            android:text="로그인"
+            android:text="회원가입"
             android:textColor="#FFF"
             android:textSize="15sp"
             android:textStyle="bold" />
 
-        <Button
-            android:id="@+id/facebookLogin"
-            android:layout_width="match_parent"
-            android:layout_height="56dp"
-            android:layout_marginTop="8dp"
-            android:background="@drawable/round_facebook"
-            android:text="Facebook으로 로그인"
-            android:textColor="#FFF"
-            android:textSize="15sp"
-            android:textStyle="bold" />
     </LinearLayout>
 
-    <com.facebook.login.widget.LoginButton
-        android:id="@+id/realFacebookLogin"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:visibility="gone" />
 </LinearLayout>

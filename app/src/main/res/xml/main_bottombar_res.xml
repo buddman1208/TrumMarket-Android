@@ -1,0 +1,14 @@
+<tabs>
+    <tab
+        icon="@drawable/btn_btmbar_market_off"
+        id="@+id/nav_market"
+        title="장터" />
+    <tab
+        icon="@drawable/btn_btmbar_my_off"
+        id="@+id/nav_my"
+        title="내 정보" />
+    <tab
+        icon="@drawable/btn_btmbar_more_off"
+        id="@+id/nav_more"
+        title="더보기" />
+</tabs>

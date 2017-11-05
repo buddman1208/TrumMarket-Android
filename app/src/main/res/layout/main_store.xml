@@ -1,0 +1,15 @@
+<layout>
+
+    <data>
+        <variable
+            name="content"
+            type="us.buddman.trumarket.models.Store" />
+    </data>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+    </LinearLayout>
+</layout>
