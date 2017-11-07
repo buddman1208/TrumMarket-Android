@@ -11,7 +11,7 @@ import us.buddman.trumarket.utils.CredentialsManager
 class FirebaseInstanceIdService : com.google.firebase.iid.FirebaseInstanceIdService() {
     override fun onTokenRefresh() {
         val refreshedToken = FirebaseInstanceId.getInstance().token
-        if (CredentialsManager.instance.activeUser.first) {
+        if (CredentialsManager.instance.activeUser.first!!) {
             //            NetworkHelper.getInstance().updateFirebaseToken(
             //                    CredentialsManager.getInstance().getActiveUser().second.getToken(),
             //                    refreshedToken

@@ -1,8 +1,7 @@
 <layout>
-
     <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-        android:layout_width="200dp"
-        android:layout_height="130dp"
+        android:layout_width="150dp"
+        android:layout_height="100dp"
         android:padding="8dp">
 
         <ImageView
@@ -10,6 +9,6 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:background="@drawable/round_brown_transparent"
-            android:scaleType="centerInside"/>
+            android:scaleType="centerInside" />
     </LinearLayout>
 </layout>

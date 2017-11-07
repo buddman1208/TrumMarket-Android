@@ -20,7 +20,8 @@ class SalePhase1Activity : BaseActivity() {
         }
         setChecked(0)
         nextFab.setOnClickListener {
-            startActivity(Intent(applicationContext, SalePhase1Activity::class.java))
+            startActivity(Intent(applicationContext, SalePhase2Activity::class.java))
+            finish()
         }
     }
 

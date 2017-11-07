@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="us.buddman.trumarket.SalePhase2Activity">
+    tools:context="us.buddman.trumarket.SalePhase1Activity">
 
     <android.support.design.widget.AppBarLayout
         android:layout_width="match_parent"
@@ -20,13 +20,14 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:clipToPadding="false"
         android:orientation="vertical"
         android:padding="16dp">
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="카테고리\n선정"
+            android:text="기본정보\n입력"
             android:textColor="@color/colorPrimary"
             android:textSize="35sp"
             android:textStyle="bold" />
@@ -35,7 +36,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
-            android:text="판매할 제품의 카테고리를 하나 골라주세요."
+            android:text="판매할 제품의 기본 정보를 입력해 주세요."
             android:textColor="@color/textNormalColor"
             android:textSize="14sp" />
 
@@ -46,93 +47,50 @@
             android:layout_marginTop="16dp"
             android:background="@color/divider_color" />
 
-        <com.google.android.flexbox.FlexboxLayout xmlns:android="http://schemas.android.com/apk/res/android"
-            xmlns:app="http://schemas.android.com/apk/res-auto"
+        <studio.carbonylgroup.textfieldboxes.TextFieldBoxes
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="-4dp"
-            app:flexWrap="wrap">
+            android:layout_marginTop="4dp"
+            app:labelText="제품 이름">
 
-            <us.buddman.trumarket.views.CartaTagView
-                android:id="@+id/tag1"
-                android:layout_width="wrap_content"
+            <studio.carbonylgroup.textfieldboxes.ExtendedEditText
+                android:id="@+id/nameInput"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_margin="4dp"
-                android:text="모두" />
+                android:inputType="textEmailAddress" />
+        </studio.carbonylgroup.textfieldboxes.TextFieldBoxes>
 
-            <us.buddman.trumarket.views.CartaTagView
-                android:id="@+id/tag2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_margin="4dp"
-                android:text="전자제품" />
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginBottom="16dp"
+            android:layout_marginTop="16dp"
+            android:background="@color/divider_color" />
 
-            <us.buddman.trumarket.views.CartaTagView
-                android:id="@+id/tag3"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_margin="4dp"
-                android:text="패션" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="사진 첨부"
+            android:textColor="@color/colorPrimary"
+            android:textSize="18sp"
+            android:textStyle="bold" />
 
-            <us.buddman.trumarket.views.CartaTagView
-                android:id="@+id/tag4"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_margin="4dp"
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="2장 필수, 최대 4장까지 선택 가능"
+            android:textColor="@color/textNormalColor" />
 
-                android:text="생활잡화" />
-
-            <us.buddman.trumarket.views.CartaTagView
-                android:id="@+id/tag5"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_margin="4dp"
-                android:text="화장품 / 미용" />
-
-            <us.buddman.trumarket.views.CartaTagView
-                android:id="@+id/tag6"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_margin="4dp"
-                android:text="스포츠 / 레져" />
-
-            <us.buddman.trumarket.views.CartaTagView
-                android:id="@+id/tag7"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_margin="4dp"
-                android:text="유아동 / 출산" />
-
-            <us.buddman.trumarket.views.CartaTagView
-                android:id="@+id/tag8"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_margin="4dp"
-                android:text="완구 / 문구" />
-
-            <us.buddman.trumarket.views.CartaTagView
-                android:id="@+id/tag9"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_margin="4dp"
-                android:text="도서" />
-
-            <us.buddman.trumarket.views.CartaTagView
-                android:id="@+id/tag10"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_margin="4dp"
-                android:text="가구" />
-
-            <us.buddman.trumarket.views.CartaTagView
-                android:id="@+id/tag11"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_margin="4dp"
-                android:text="기타" />
-
-
-        </com.google.android.flexbox.FlexboxLayout>
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/imageRecyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="-16dp"
+            android:layout_marginRight="-16dp"
+            android:layout_marginTop="8dp"
+            android:clipToPadding="false"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp" />
 
         <android.support.v4.widget.Space
             android:layout_width="match_parent"

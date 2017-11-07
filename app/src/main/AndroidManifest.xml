@@ -46,6 +46,7 @@
         </activity>
         <activity android:name=".RegisterActivity" />
         <activity android:name=".SalePhase1Activity"></activity>
+        <activity android:name=".SalePhase2Activity"></activity>
     </application>
 
 </manifest>
